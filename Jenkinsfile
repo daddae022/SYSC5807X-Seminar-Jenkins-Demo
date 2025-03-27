@@ -1,3 +1,4 @@
+/*
 pipeline {
     agent any
 
@@ -15,6 +16,23 @@ pipeline {
         stage('Deploy') {
             steps {
                 echo 'Deploying...'
+            }
+        }
+    }
+}
+*/
+
+
+pipeline {
+    agent any
+
+    stages {
+        stage('Setup') {
+            steps {
+                browserstack(credentialsId: '3be04f66-1c85-4b95-bdf5-216a0d4d796c') {
+                    echo 'Running tests on BrowserStack...'
+                    sh 'mvn test'
+                }
             }
         }
     }
