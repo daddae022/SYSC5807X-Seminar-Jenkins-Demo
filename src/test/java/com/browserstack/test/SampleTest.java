@@ -14,7 +14,7 @@ public class SampleTest {
     public void testGoogleOnBrowserStack() throws Exception {
         String username = System.getenv("BROWSERSTACK_USERNAME");
         String accessKey = System.getenv("BROWSERSTACK_ACCESS_KEY");
-       String buildName = System.getenv("JENKINS_LABEL");
+       String buildName = System.getenv("BROWSERSTACK_BUILD_NAME");
 if (buildName == null || buildName.isEmpty()) {
     buildName = "Jenkins - Seminar Demo Build " + System.currentTimeMillis();
 }
