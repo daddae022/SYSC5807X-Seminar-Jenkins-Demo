@@ -21,7 +21,8 @@ pipeline {
                     bat 'mvn test'
 
                     echo 'Stopping BrowserStack Local...'
-                    bat '.\\BrowserStackLocal.exe --key %BROWSERSTACK_ACCESS_KEY% --daemon stop'
+                    bat(script: '.\\BrowserStackLocal.exe --key %BROWSERSTACK_ACCESS_KEY% --daemon stop', returnStatus: true)
+
                 }
             }
         }
