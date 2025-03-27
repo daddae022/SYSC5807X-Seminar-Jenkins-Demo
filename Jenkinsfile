@@ -26,6 +26,9 @@ pipeline {
 
                 }// Enable reporting in Jenkins
 browserStackReportPublisher 'automate'
+
+// ✅ Show detailed JUnit test reports
+                junit '**/target/surefire-reports/*.xml'
             }
         }
     }
