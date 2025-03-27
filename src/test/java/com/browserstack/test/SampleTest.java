@@ -26,6 +26,8 @@ public class SampleTest {
         browserstackOptions.put("sessionName", "Google Test via Jenkins");
         browserstackOptions.put("buildName", buildName);
         browserstackOptions.put("seleniumVersion", "4.0.0");
+browserstackOptions.put("local", "true"); // 👈 required for local testing
+
 
         capabilities.setCapability("bstack:options", browserstackOptions);
 
