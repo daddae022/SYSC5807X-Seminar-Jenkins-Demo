@@ -9,7 +9,7 @@ pipeline {
                     bat 'curl -o BrowserStackLocal-win32.zip https://www.browserstack.com/browserstack-local/BrowserStackLocal-win32.zip'
 
                     echo 'Unzipping binary...'
-                    bat 'powershell.exe Expand-Archive BrowserStackLocal-win32.zip -DestinationPath .'
+                    bat 'powershell.exe Expand-Archive -Path BrowserStackLocal-win32.zip -DestinationPath . -Force'
 
                     echo 'Checking folder structure...'
                     bat 'dir'
