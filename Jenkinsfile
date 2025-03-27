@@ -11,14 +11,17 @@ pipeline {
                     echo 'Unzipping binary...'
                     bat 'powershell.exe Expand-Archive BrowserStackLocal-win32.zip -DestinationPath .'
 
+                    echo 'Checking folder structure...'
+                    bat 'dir'
+
                     echo 'Starting BrowserStack Local...'
-                    bat 'BrowserStackLocal-win32\\BrowserStackLocal.exe --key %BROWSERSTACK_ACCESS_KEY% --daemon start'
+                    bat '.\\BrowserStackLocal.exe --key %BROWSERSTACK_ACCESS_KEY% --daemon start'
 
                     echo 'Running Selenium tests...'
                     bat 'mvn test'
 
                     echo 'Stopping BrowserStack Local...'
-                    bat 'BrowserStackLocal-win32\\BrowserStackLocal.exe --key %BROWSERSTACK_ACCESS_KEY% --daemon stop'
+                    bat '.\\BrowserStackLocal.exe --key %BROWSERSTACK_ACCESS_KEY% --daemon stop'
                 }
             }
         }
