@@ -4,7 +4,7 @@ pipeline {
     stages {
         stage('Setup') {
             steps {
-                browserstack(credentialsId: '3be04f66-1c85-4b95-bdf5-216a0d4d796c', localConfig: [localOptions: '', localPath: '']) {
+                browserstack(credentialsId: '3be04f66-1c85-4b95-bdf5-216a0d4d796c') {
                     echo 'Downloading BrowserStack Local binary...'
                     bat 'curl -o BrowserStackLocal-win32.zip https://www.browserstack.com/browserstack-local/BrowserStackLocal-win32.zip'
 
