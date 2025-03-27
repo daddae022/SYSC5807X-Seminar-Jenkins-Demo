@@ -23,7 +23,9 @@ pipeline {
                     echo 'Stopping BrowserStack Local...'
                     bat(script: '.\\BrowserStackLocal.exe --key %BROWSERSTACK_ACCESS_KEY% --daemon stop', returnStatus: true)
 
-                }
+
+                }// Enable reporting in Jenkins
+browserStackReportPublisher 'automate'
             }
         }
     }
