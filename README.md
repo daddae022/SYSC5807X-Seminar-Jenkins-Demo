@@ -28,3 +28,11 @@ A repository to perform Jenkins Test for SYSC5807X Seminar.
 ---
 
 🎯 This test opens [google.com](https://www.google.com) in a real browser on BrowserStack and prints the page title to confirm it's working.
+
+
+---
+
+## 📚 Resources
+
+- 🔗 [BrowserStack Jenkins Plugin + Selenium Java Guide](https://www.browserstack.com/docs/automate/selenium/jenkins)
+- 🎓 [BrowserStack Jenkins CI Tutorial](https://www.browserstack.com/guide/continuous-integration-with-jenkins-tutorial)
